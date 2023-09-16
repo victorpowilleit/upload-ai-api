@@ -1,1 +1,7 @@
-http -f POST localhost:3333/videos cv@./fakeFiles/data.mp3
+http -f POST localhost:3333/videos cv@./fakeFiles/data2.mp3
+
+
+http POST http://127.0.0.1:3333/videos/7b63597b-8c46-46b2-b5e8-491d1d7422c3/transcription prompt="bate papo"
+
+
+http POST http://127.0.0.1:3333/ai/complete videoId="7b63597b-8c46-46b2-b5e8-491d1d7422c3" temperature:=0.3 template="gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
